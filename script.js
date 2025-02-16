@@ -1,7 +1,9 @@
 function toggleMenu() {
   const menu = document.getElementById("menu");
-  menu.classList.toggle("open");
+  const isExpanded = menu.classList.toggle("open");
+  document.querySelector(".menu-toggle").setAttribute("aria-expanded", isExpanded);
 }
+
 
 // Placeholder function for filtering products
 function filterProducts() {
