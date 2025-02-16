@@ -238,4 +238,56 @@
   .product-card {
     cursor: pointer;
   }
-  
+
+/* Toggle button for the mobile menu */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile menu styles */
+nav#mobile-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  nav#mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  nav#mobile-menu a {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .filter-search-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  /* Ensure product cards are 100% width for small screens */
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  /* Footer adjustments */
+  .footer-col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
