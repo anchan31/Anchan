@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anchan Store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="logo">Anchan</div>
+    <nav>
+        <a href="#about-section">About</a>
+        <a href="#services-section">Services</a>
+        <a href="https://wa.me/919717113764?text=Hey%20I'm%20interested%20in%20one%20of%20your%20products:%20%20%20%20%20%20and%20I%20want%20to%20know%20ways%20to%20earn%20and%20keep%20myself%20healthy." target="_blank" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i> Anchan Store
+            </a>
+      </nav>    
+  </header>
+
+  <section id="product-section" class="section">
+    <div class="product-header">
+      <h2>Find the product Just for U💖</h2>
+      <div class="filter-search-container">
+        <div class="filter-container">
+          <label for="product-filter">Filter:</label>
+          <select id="product-filter" onchange="filterProducts()">
+            <option value="all">All</option>
+            <option value="Health & Wellness">Health & Wellness</option>
+            <option value="Personal Care">Personal Care</option>
+            <option value="Make-Up">Make-Up</option>
+            <option value="Premium Skin Care">Premium Skin Care</option>
+          </select>
+        </div>
+        <div class="search-container">
+          <input type="text" id="product-search" placeholder="Search products..." />
+          <button onclick="searchProducts()">Search</button>
+        </div>
+      </div>
+    </div>
+  
+    <div id="product-list" class="product-list">
+        <!-- Sample Products -->
+        <a href="https://www.myvestige.com/product/21001" target="_blank" class="product-link">
+          <div class="product-card" data-category="Health & Wellness">
+            <img src="Images/Health & Wellness/Glucosamine.jpg" alt="Health & Wellness" />
+            <h3>Vestige Glucosamine</h3>
+            <p>Click To know more.<br>DP:₹520</p>
+          </div>
+          </a>
+          <a href="https://www.myvestige.com/product/20027A" target="_blank" class="product-link">
+          <div class="product-card" data-category="Health & Wellness">
+            <img src="Images/Health & Wellness/Flax Oil.jpg" alt="Health & Wellness" />
+            <h3>Vestige Flax Oil</h3>
+            <p>Click To know more.<br>DP:₹570</p>
+          </div>
+          </a>
+          <a href="https://www.myvestige.com/product/21001" target="_blank" class="product-link">
+          <div class="product-card" data-category="Health & Wellness">
+            <img src="Images/Health & Wellness/Glucosamine.jpg" alt="Health & Wellness" />
+            <h3>Vestige Glucosamine</h3>
+            <p>Click To know more.<br>DP:₹520</p>
+          </div>
+          </a>
+          <a href="https://www.myvestige.com/product/21001" target="_blank" class="product-link">
+          <div class="product-card" data-category="Health & Wellness">
+            <img src="Images/Health & Wellness/Glucosamine.jpg" alt="Health & Wellness" />
+            <h3>Vestige Glucosamine</h3>
+            <p>Click To know more.<br>DP:₹520</p>
+          </div>
+          </a>
+        <!-- Add more products as needed -->
+      </div>
+      
+  </section>
+  
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Contact through WhatsApp</h4>
+        <a href="https://wa.me/919717113764?text=Hey%20I'm%20interested%20in%20one%20of%20your%20products:%20%20%20%20%20%20and%20I%20want%20to%20know%20ways%20to%20earn%20and%20keep%20myself%20healthy." target="_blank" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i> Anchan Store
+        </a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Back to Top</h4>
+          <a href="#home" class="back-to-top">↑</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Anchan Store</p>
+      </div>
+    </div>
+  </footer>
+  <section id="about-section" class="section">
+    <h2>About Us</h2>
+    <p>At Vestige, we're passionate about providing high-quality products that enhance the lives of our customers.  We carefully formulate and source our products across a wide range of categories, including health and wellness, personal care, home care, and more, ensuring they meet the highest standards of quality and efficacy.  But Vestige is more than just exceptional products; it's a thriving community.  We believe in the power of human connection and the strength that comes from supporting one another.  Our direct selling model fosters meaningful relationships between our distributors and their customers, creating a network of shared success.  We're dedicated to providing not only outstanding products but also a nurturing and collaborative environment where our distributors can learn, grow, and achieve their dreams.At Vestige, we're passionate about providing high-quality products that enhance the lives of our customers.  We carefully formulate and source our products across a wide range of categories, including health and wellness, personal care, home care, and more, ensuring they meet the highest standards of quality and efficacy.  But Vestige is more than just exceptional products; it's a thriving community.  We believe in the power of human connection and the strength that comes from supporting one another.  Our direct selling model fosters meaningful relationships between our distributors and their customers, creating a network of shared success.  We're dedicated to providing not only outstanding products but also a nurturing and collaborative environment where our distributors can learn, grow, and achieve their dreams.</p>
+  </section>
+  
+  <section id="services-section" class="section">
+    <h2>Our Services</h2>
+    <p>Details about the services offered...</p>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+  
+</html>

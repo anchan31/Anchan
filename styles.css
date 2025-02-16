@@ -1,0 +1,241 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  
+  nav a:hover {
+    color: blue;
+  }
+  
+  .whatsapp-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #25d366;
+    text-decoration: none;
+  }
+  
+  .whatsapp-link i {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  .whatsapp-link:hover {
+    color: #128c7e;
+  }
+  
+  /* Section */
+  .section {
+    padding: 80px 20px 20px; /* Extra top padding so it doesn't hide under header */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Product Header Container */
+  .product-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 20px;
+  }
+  
+  .filter-search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+  }
+  
+  .filter-container select,
+  .search-container input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-container button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-container button:hover {
+    background-color: darkblue;
+  }
+  
+  /* Product List */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .product-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-col {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  
+  .footer-col h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: blue;
+  }
+  
+  .back-to-top {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .back-to-top:hover {
+    color: blue;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .footer-col {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-col {
+      width: 100%;
+    }
+  }
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+
+
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .product-card {
+    cursor: pointer;
+  }
+  
