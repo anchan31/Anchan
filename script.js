@@ -31,12 +31,11 @@
     window.location.href = productPageUrl;
   }
   
-  function toggleMenu() {
-    const navMenu = document.getElementById('nav-menu');
-    if (navMenu.style.display === 'flex') {
-      navMenu.style.display = 'none';
-    } else {
-      navMenu.style.display = 'flex';
-    }
-  }
-  
+  // JavaScript for Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('open'); // Toggle the open class
+  hamburger.classList.toggle('active'); // Change the hamburger icon to active state
+});
