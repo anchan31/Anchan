@@ -1,37 +1,33 @@
-  function filterProducts() {
-    const filterValue = document.getElementById("product-filter").value;
-    const products = document.querySelectorAll(".product-card");
-  
-    products.forEach((product) => {
-      if (filterValue === "all" || product.getAttribute("data-category") === filterValue) {
-        product.style.display = "block"; // Show product
-      } else {
-        product.style.display = "none"; // Hide product
-      }
-    });
-  }
-  
-
-  function searchProducts() {
-    const query = document.getElementById("product-search").value.toLowerCase();
-    const products = document.querySelectorAll(".product-card");
-  
-    products.forEach((product) => {
-      // Combine text content from product title and description
-      const productText = product.textContent.toLowerCase();
-      if (productText.includes(query)) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
-    });
-  }
-  
-  function redirectToProductPage(productPageUrl) {
-    window.location.href = productPageUrl;
-  }
-
 function toggleMenu() {
-  const menu = document.getElementById("mobile-menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("open");
+}
+
+// Placeholder function for filtering products
+function filterProducts() {
+  const filterValue = document.getElementById("product-filter").value;
+  const products = document.querySelectorAll(".product-card");
+
+  products.forEach((product) => {
+    if (filterValue === "all" || product.dataset.category === filterValue) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+// Placeholder function for searching products
+function searchProducts() {
+  const searchValue = document.getElementById("product-search").value.toLowerCase();
+  const products = document.querySelectorAll(".product-card");
+
+  products.forEach((product) => {
+    const productName = product.querySelector("h3").textContent.toLowerCase();
+    if (productName.includes(searchValue)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  });
 }
