@@ -329,3 +329,69 @@
     overflow-x: hidden;
   }
 }
+
+
+/* Hamburger button styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Mobile Menu Styling */
+nav {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  nav.open {
+    display: flex; /* Show menu when open class is added */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+}
+
