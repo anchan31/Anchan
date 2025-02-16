@@ -210,32 +210,64 @@
   
 
   /* Responsive Adjustments */
-  @media (max-width: 1024px) {
-    .footer-col {
-      width: 45%;
-    }
+@media (max-width: 1024px) {
+  .menu {
+    display: none; /* Hide menu by default on smaller screens */
+    flex-direction: column;
   }
-  
-  @media (max-width: 768px) {
-    .footer-col {
-      width: 100%;
-    }
+
+  .menu.open {
+    display: flex; /* Show menu when open on small screens */
   }
-  .product-card img {
+
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* More flexible grid for small screens */
+  }
+
+  .footer-col {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-col {
+    width: 100%; /* Stack footer columns vertically on mobile */
+  }
+
+  .filter-search-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .search-container button {
     width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
   }
-  
 
+  nav a {
+    font-size: 16px; /* Slightly larger font size for easier tap targets */
+  }
 
+  .menu-toggle {
+    font-size: 24px; /* Larger menu button for easier tap */
+  }
+}
   .product-link {
     text-decoration: none;
     color: inherit;
   }
+
+
   
   .product-card {
     cursor: pointer;
   }
   
+button, a {
+  outline: none; /* Remove default outline */
+  transition: box-shadow 0.3s;
+}
+
+button:focus, a:focus {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Clear focus ring for accessibility */
+}
