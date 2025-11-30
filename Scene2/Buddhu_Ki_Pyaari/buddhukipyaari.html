@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Papers</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Your existing paper elements with optimized images -->
+    <div class="paper heart" id="goToNextScene"></div>
+
+    <div class="paper">
+        <p class="celebration-text">25 years 💖</p>
+    </div>
+
+    <div class="paper image">
+        <p>and I fallen in</p>
+        <p>Love with You 😍</p>
+        <!-- Use optimized, local images instead -->
+        <img src="../../Assets/Images/Scene2/Buddhu_Ki_Pyaari/1.jpeg" alt="Love" loading="lazy" />
+    </div>
+
+    <div class="paper image">
+        <p>How can be</p>
+        <p>someone so cute ❤️</p>
+        <img src="../../Assets/Images/Scene2/Buddhu_Ki_Pyaari/2.jpg" alt="Cute" loading="lazy" />
+    </div>
+
+    <div class="paper red">
+        <p class="p1">and ofc</p>
+        <p class="p2">Happy Birthday Buddhu😍</p>
+    </div>
+
+    <div class="paper">
+        <p class="p1">You are Cute</p>
+        <p class="p1">Amazing <span style="color: #ff4081;">❤️</span></p>
+    </div>
+
+    <div class="paper">
+        <p class="p1">Drag the papers to move!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

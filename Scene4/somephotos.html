@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Her Memories Gallery</title>
+    <link rel="icon" href="../Assets/Images/Scene1/Img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="A photo gallery celebrating her memories and moments." />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1>Her Memories Gallery</h1>
+            <p class="tagline">A collection of the moments that made her smile</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro" aria-label="Introduction">
+            <p>
+                Photos that tell her story — little joys, big milestones, and everything in between.
+            </p>
+        </section>
+
+        <section class="gallery" aria-label="Memories Gallery" id="gallery">
+            <!-- Images will be loaded progressively by JavaScript -->
+        </section>
+
+        <div id="loading-indicator" class="loading-indicator">
+            <div class="spinner"></div>
+            <p>Loading more memories...</p>
+        </div>
+
+        <section class="closing" aria-label="Closing Message">
+            <p>
+                Every picture holds a piece of her heart — more to come.
+            </p>
+        </section>
+    </main>
+
+    <!-- Single Lightbox Container -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <span class="close" aria-label="Close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full size memory" />
+    </div>
+
+    <footer class="site-footer">
+        <small>Made with love • For her </small>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('gallery');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.lightbox .close');
+            const loadingIndicator = document.getElementById('loading-indicator');
+
+            const TOTAL_IMAGES = 500;
+            const BATCH_SIZE = 50; // Load 50 images at a time
+            let currentIndex = 0;
+            let isLoading = false;
+
+            // Function to create a single image tile
+            function createImageTile(index) {
+                const anchor = document.createElement('a');
+                anchor.className = 'tile';
+                anchor.href = '#';
+
+                const img = document.createElement('img');
+                img.src = `../Assets/Images/Scene4/Anjali (${index}).webp`;
+                img.alt = `Memory ${index}`;
+                img.loading = 'lazy';
+
+                // Handle missing images
+                img.onerror = function () {
+                    anchor.style.display = 'none';
+                };
+
+                anchor.appendChild(img);
+
+                // Lightbox functionality
+                anchor.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('active');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                });
+
+                return anchor;
+            }
+
+            // Function to load a batch of images
+            function loadBatch() {
+                if (isLoading || currentIndex >= TOTAL_IMAGES) {
+                    loadingIndicator.style.display = 'none';
+                    return;
+                }
+
+                isLoading = true;
+                loadingIndicator.style.display = 'flex';
+
+                const endIndex = Math.min(currentIndex + BATCH_SIZE, TOTAL_IMAGES);
+                const fragment = document.createDocumentFragment();
+
+                for (let i = currentIndex + 1; i <= endIndex; i++) {
+                    fragment.appendChild(createImageTile(i));
+                }
+
+                gallery.appendChild(fragment);
+                currentIndex = endIndex;
+                isLoading = false;
+
+                if (currentIndex >= TOTAL_IMAGES) {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+
+            // Intersection Observer for infinite scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !isLoading && currentIndex < TOTAL_IMAGES) {
+                        loadBatch();
+                    }
+                });
+            }, {
+                rootMargin: '200px' // Start loading 200px before reaching the indicator
+            });
+
+            observer.observe(loadingIndicator);
+
+            // Load initial batch
+            loadBatch();
+
+            // Lightbox Controls
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                setTimeout(() => {
+                    lightboxImg.src = '';
+                }, 300);
+            };
+
+            closeBtn.addEventListener('click', closeLightbox);
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

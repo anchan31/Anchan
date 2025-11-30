@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Balloon Game 🎈</title>
+    <link rel="stylesheet" href="balloon-game.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🎈 Pop All The Birthday Balloons! 🎈</h1>
+            <p>Click on each balloon to pop it and unlock your surprise!</p>
+            <div class="score-info">
+                <span id="balloonCount">Balloons Left: 8</span>
+            </div>
+        </div>
+
+        <div id="balloon-game">
+            <div id="balloon-container"></div>
+            
+            <div class="game-message" id="gameMessage" style="display:none;">
+                <h2>🎉 Amazing! All balloons popped! 🎉</h2>
+                <p>You're ready for your birthday surprise!</p>
+                <button id="goToNextSite" class="continue-btn">
+                    Go to Your Birthday Surprise! 💖
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="balloon-game.js"></script>
+</body>
+</html>

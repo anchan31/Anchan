@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #FFDEE9, #B5FFFC);
+    color: #333;
+    padding: 0 5%;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+}
+
+.main-content {
+    max-width: 60%;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff4081;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.start-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start-button:hover {
+    background-color: #ff1f68;
+}
+
+/* Side Photos */
+.side-photo {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 20px;
+}
+
+/* Adjust Layout for Medium and Small Devices */
+@media (max-width: 1024px) {
+    .main-content {
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-page {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px;
+    }
+
+    .main-content {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .side-photo {
+        width: 80px; /* Slightly smaller */
+        margin: 10px 0; /* Vertical space between items */
+    }
+
+    .start-button {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) { /* Smallest screens */
+    h1 {
+        font-size: 1.8rem; /* Further reduce heading */
+    }
+
+    p {
+        font-size: 0.95rem; /* Slightly smaller paragraph */
+    }
+
+    .side-photo {
+        width: 70px; /* Even smaller on smallest screens */
+    }
+
+    .start-button {
+        padding: 16px 32px; /* Larger touch area */
+        font-size: 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.duration-text {
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #ff4081; /* Example color */
+    margin-top: 10px; /* Space above the text */
+    text-align: center; /* Center align the text */
+}
+.date-text {
+    text-align: center; /* Center align the date */
+    font-size: 1.5rem; /* Adjust font size */
+    color: #ff4081; /* Example color */
+    margin-bottom: 20px; /* Space below the date */
+}

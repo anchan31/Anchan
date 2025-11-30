@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Beautiful!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="floating-hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <div class="sparkles">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="parallax-bg"></div>
+      <div class="container hero-content">
+          <div class="hero-photos-vertical">
+            <img src="../Assets/Images/Scene3/anjali1.jpg" alt="Anjali 1" class="vertical-photo" loading="lazy" decoding="async" />
+            <img src="../Assets/Images/Scene3/anjali2.jpg" alt="Anjali 2" class="vertical-photo" loading="lazy" decoding="async" />
+            <img src="../Assets/Images/Scene3/anjali3.jpg" alt="Anjali 3" class="vertical-photo" loading="lazy" decoding="async" />
+          </div>
+          <div class="hero-text">
+            <h1 class="hero-title">Happy Birthday Beautiful!</h1>
+            <h2 class="hero-subtitle">To Anjali Raghav the Love of My Life</h2>
+            <div class="hero-hearts">
+              <span class="heart-icon">💖</span>
+              <span class="heart-icon">💝</span>
+              <span class="heart-icon">💖</span>
+            </div>
+          </div>
+      </div>
+    </section>
+    
+
+    <section class="countup-section">
+      <div class="container">
+        <h3>Time Since Your Special Day</h3>
+        <p class="countup-subtitle">Every moment since 03-November-1999 has been precious</p>
+        <div class="countup-timer">
+          <div class="countup-card">
+            <span id="years">0</span>
+            <label>Years</label>
+          </div>
+          <div class="countup-card">
+            <span id="days">0</span>
+            <label>Days</label>
+          </div>
+          <div class="countup-card">
+            <span id="hours">0</span>
+            <label>Hours</label>
+          </div>
+          <div class="countup-card">
+            <span id="minutes">0</span>
+            <label>Minutes</label>
+          </div>
+        </div>
+        <small class="since-marker">since 03-November-1999</small>
+      </div>
+    </section>
+    
+
+    <!-- Romantic Messages Section -->
+    <section class="messages-section">
+        <div class="container">
+            <h3>Messages from My Heart</h3>
+            <div class="message-container">
+                <div class="romantic-message active" id="message-0">
+                    Happy birthday to the love of my life! You light up my world with your smile and fill my heart with endless joy.
+                </div>
+            </div>
+            <div class="message-nav">
+                <button class="btn btn--secondary" id="prev-message">← Previous</button>
+                <button class="btn btn--secondary" id="next-message">Next →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Gift Box -->
+    <section class="gift-section">
+        <div class="container">
+            <h3>I Have Something Special for You</h3>
+            <div class="gift-box" id="giftBox">
+                <div class="gift-lid"></div>
+                <div class="gift-body"></div>
+                <div class="gift-ribbon-v"></div>
+                <div class="gift-ribbon-h"></div>
+                <div class="gift-bow"></div>
+            </div>
+            <p class="gift-instruction">Click the gift to open!</p>
+            <div class="gift-message hidden" id="giftMessage">
+                <div class="gift-message-content">
+                    <h4>You are the greatest gift in my life! 💝</h4>
+                    <p>Every day with you is like unwrapping a present filled with love, joy, and endless possibilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Birthday Cake -->
+    <section class="cake-section">
+        <div class="container">
+            <h3>Make a Wish and Blow Out the Candles!</h3>
+            <div class="birthday-cake">
+                <div class="cake-base"></div>
+                <div class="cake-layer"></div>
+                <div class="cake-top"></div>
+                <div class="candles">
+                    <div class="candle" data-candle="1">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle" data-candle="2">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle" data-candle="3">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle" data-candle="4">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                    <div class="candle" data-candle="5">
+                        <div class="flame"></div>
+                        <div class="wick"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="cake-instruction">Click each candle to blow it out!</p>
+        </div>
+    </section>
+ 
+
+    <!-- Love Letter Section -->
+    <section class="love-letter-section">
+        <div class="container">
+            <h3>A Letter from My Heart</h3>
+            <div class="love-letter">
+                <div class="letter-paper">
+                    <div class="letter-header">My Dearest Love,</div>
+                    <div class="letter-content" id="letterContent">
+                        <span class="cursor">|</span>
+                    </div>
+                    <div class="letter-signature">Forever yours, ❤️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="balloons-container">
+      <div class="balloon red" data-message="You make my heart soar! 🎈"></div>
+      <div class="balloon pink" data-message="You're my sunshine! ☀️"></div>
+      <div class="balloon purple" data-message="Love you to the moon! 🌙"></div>
+      <div class="balloon yellow" data-message="You're my everything! ⭐"></div>
+      <div class="balloon blue" data-message="Forever and always! 💕"></div>
+    </div>
+    <div class="balloon-message hidden" id="balloonMessage"></div>
+    
+    <script>
+    const nextSiteUrl = "../Game2/memory-game.html";
+    function initBalloons() {
+      const balloons = document.querySelectorAll('.balloon');
+      const balloonMessage = document.getElementById('balloonMessage');
+      if (!balloons.length || !balloonMessage) return;
+      let poppedCount = 0;
+      balloons.forEach((balloon) => {
+        balloon.addEventListener('click', function() {
+          if (!balloon.classList.contains('popped')) {
+            balloon.classList.add('popped');
+            poppedCount++;
+            const message = balloon.getAttribute('data-message');
+            balloonMessage.textContent = message;
+            balloonMessage.classList.remove('hidden');
+            setTimeout(() => {
+              balloonMessage.classList.add('hidden');
+            }, 3000);
+            // All popped? Redirect!
+            if (poppedCount === balloons.length) {
+              setTimeout(() => {
+                window.location.href = nextSiteUrl;
+              }, 1200);
+            }
+          }
+        });
+      });
+    }
+    document.addEventListener("DOMContentLoaded", initBalloons);
+    </script>
+    
+
+
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div>
+        
+  <script>
+    function initCountupTimer() {
+      function updateCountup() {
+        // Start date: 3 November 1999 (month is 0-indexed!)
+        const birthday = new Date(1999, 10, 3);
+        const now = new Date();
+
+        // Calculate years difference
+        let years = now.getFullYear() - birthday.getFullYear();
+
+        // Figure last anniversary
+        let lastAnniv = new Date(birthday.getFullYear() + years, birthday.getMonth(), birthday.getDate());
+
+        // If today before this year's anniversary, subtract 1 year
+        if (now < lastAnniv) {
+          years--;
+          lastAnniv = new Date(birthday.getFullYear() + years, birthday.getMonth(), birthday.getDate());
+        }
+
+        // Calculate the time span since the last anniversary
+        let msSinceLast = now - lastAnniv;
+        let days = Math.floor(msSinceLast / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((msSinceLast % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((msSinceLast % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById('years').textContent = years;
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+      }
+
+      // Run once on load
+      updateCountup();
+      // Update every minute (no seconds needed!)
+      setInterval(updateCountup, 60000);
+    }
+
+    // Run only after DOM is ready
+    document.addEventListener('DOMContentLoaded', initCountupTimer);
+  </script>
+    
+    
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    touch-action: manipulation;
+}
+
+.paper {
+    background: #ffffff;
+    background-image: 
+        linear-gradient(#f0f0f0 1px, transparent 1px),
+        linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 2px solid #dee2e6;
+    padding: 20px 100px;
+    transform: rotateZ(-5deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    position: absolute;
+    transition: transform 0.1s ease;
+    will-change: transform;
+    touch-action: none;
+}
+
+.paper.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff6b9d, #ff8a9b);
+    background-image: none; /* Remove grid pattern for heart */
+}
+
+.paper.image {
+    padding: 10px;
+    max-width: 400px;
+}
+
+.paper.image p {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+img {
+    max-height: 200px;
+    width: 100%;
+    user-select: none;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Fixed heart icon using emoji instead of external image */
+.paper.heart::after {
+    content: "💖";
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+}
+
+p {
+    font-family: 'Zeyada', cursive;
+    font-size: 50px;
+    color: #1a1a2e;
+    opacity: 0.85;
+    user-select: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin: 15px 0;
+}
+
+.celebration-text {
+    font-size: 50px;
+    font-family: 'Zeyada', cursive;
+    color: #ff4081;
+    text-align: center;
+    margin-top: 10px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff4081; }
+    to { text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .paper {
+        padding: 15px 30px;
+        max-width: 90vw;
+    }
+    
+    p {
+        font-size: 35px;
+    }
+    
+    .celebration-text {
+        font-size: 40px;
+    }
+    
+    .paper.image p {
+        font-size: 24px;
+    }
+}
